@@ -1,4 +1,5 @@
 #!/bin/sh
 
 cd /opt/statsd
+erb config.js.erb > config.js
 node stats.js config.js

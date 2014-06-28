@@ -3,7 +3,7 @@
 set -e
 
 apt-get update
-apt-get install -y curl unzip nodejs npm
+apt-get install -y curl unzip nodejs ruby
 
 # Install statsd
 cd /opt
@@ -11,13 +11,3 @@ curl -k -L https://github.com/etsy/statsd/archive/v0.7.1.zip > statsd.zip
 unzip statsd.zip
 ln -s statsd-0.7.1 statsd
 rm statsd.zip
-cd statsd
-
-cat << EOF > /opt/statsd/config.js
-{
-  graphiteHost: "127.0.0.1",
-  graphitePort: 2003,
-  port: 8125,
-  flushInterval: 10000
-}
-EOF
