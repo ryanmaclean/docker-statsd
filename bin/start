@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd /opt/statsd
+node stats.js config.js
