@@ -6,5 +6,7 @@ ADD ./bin/build /bin/build
 RUN /bin/build
 
 EXPOSE 8125/udp
+EXPOSE 8126
+
 ENTRYPOINT ["/bin/start"]
 CMD []
