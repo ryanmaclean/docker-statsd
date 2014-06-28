@@ -7,7 +7,8 @@ A simple docker container for running statsd.
 Start up statsd
 
 ```bash
-$ docker run -p 8125:8125/udp -p 8126:8126 ejholmes/statsd
+$ docker run --env GRAPHITE_HOST=graphite.example.com \
+    -p 8125:8125/udp -p 8126:8126 ejholmes/statsd
 ```
 
 Send some metrics to it:
