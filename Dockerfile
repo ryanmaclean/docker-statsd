@@ -1,6 +1,9 @@
 FROM ubuntu:12.04
 MAINTAINER Eric Holmes <eric@ejholmes.io>
 
+ENV GRAPHITE_HOST localhost
+ENV GRAPHITE_PORT 2003
+
 ADD ./bin/start /bin/start
 ADD ./bin/build /bin/build
 RUN /bin/build

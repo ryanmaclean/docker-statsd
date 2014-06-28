@@ -1,6 +1,6 @@
 {
-  graphiteHost: "<%= ENV['GRAPHITE_HOST'] || 'localhost' %>",
-  graphitePort: <%= ENV['GRAPHITE_PORT'] || 2003 %>,
+  graphiteHost: "<%= ENV['GRAPHITE_HOST'] %>",
+  graphitePort: <%= ENV['GRAPHITE_PORT'] %>,
   port: 8125,
   flushInterval: 10000
 }
