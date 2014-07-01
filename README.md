@@ -1,6 +1,6 @@
 # Docker Statsd
 
-A simple docker container for running statsd.
+A simple docker container for running [statsd](https://github.com/etsy/statsd/).
 
 ## Usage
 
