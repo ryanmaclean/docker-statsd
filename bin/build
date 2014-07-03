@@ -2,12 +2,14 @@
 
 set -e
 
-apt-get update
+export DEBIAN_FRONTEND=noninteractive
+
+apt-get update -q
 apt-get install -y curl unzip nodejs ruby
 
 # Install statsd
 cd /opt
-curl -k -L https://github.com/etsy/statsd/archive/v0.7.1.zip > statsd.zip
+curl -s -k -L https://github.com/etsy/statsd/archive/v0.7.1.zip > statsd.zip
 unzip statsd.zip
 ln -s statsd-0.7.1 statsd
 rm statsd.zip
