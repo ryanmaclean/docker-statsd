@@ -1,5 +1,6 @@
 #!/bin/sh
 
+confd -verbose -onetime -node $ETCD
+
 cd /opt/statsd
-erb config.js.erb > config.js
 node stats.js config.js

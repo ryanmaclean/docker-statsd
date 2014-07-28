@@ -1,0 +1,6 @@
+[template]
+src = "statsd.js.tmpl"
+dest = "/opt/statsd/config.js"
+keys = [
+  "/carbon/host",
+]
