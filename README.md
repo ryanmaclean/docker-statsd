@@ -1,11 +1,11 @@
 # Docker Statsd
 
-A simple docker container for running [statsd](https://github.com/etsy/statsd/), configured
+A simple docker container for running [StatsD](https://github.com/etsy/statsd/), configured
 via etcd and confd.
 
 ## Usage
 
-Ensure that you have [carbon](https://github.com/ejholmes/docker-carbon) running prior. Set
+Ensure that you have [Carbon](https://github.com/ejholmes/docker-carbon) running prior. Set
 the `/carbon/host` key in etcd:
 
 ```bash
