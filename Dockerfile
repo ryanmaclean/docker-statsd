@@ -7,6 +7,7 @@ ADD ./bin/start /bin/start
 ADD ./bin/build /bin/build
 RUN /bin/build
 ADD ./confd /etc/confd
+ADD ./Procfile /Procfile
 
 EXPOSE 8125/udp
 EXPOSE 8126
