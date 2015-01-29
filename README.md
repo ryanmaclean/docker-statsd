@@ -1,4 +1,4 @@
-# Docker Statsd ignore
+# Docker Statsd ignore me too
 
 A simple docker container for running [StatsD](https://github.com/etsy/statsd/), configured
 via etcd and confd.
