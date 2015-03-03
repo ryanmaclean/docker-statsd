@@ -1,22 +1,14 @@
 # Docker Statsd
 
-A simple docker container for running [StatsD](https://github.com/etsy/statsd/), configured
-via etcd and confd.
+A simple docker container for running [StatsD](https://github.com/etsy/statsd/).
 
 ## Usage
-
-Ensure that you have [Carbon](https://github.com/ejholmes/docker-carbon) running prior. Set
-the `/carbon/host` key in etcd:
-
-```bash
-$ etcdctl set /carbon/host 10.0.0.10
-```
 
 Start up statsd
 
 ```bash
-$ docker run --rm --name statsd --env ETCD=http://<ip>:4001 \
-    -p 8125:8125/udp -p 8126:8126 ejholmes/statsd
+$ docker run --rm --name statsd -v $PWD/config.js:/opt/statsd/config.js:ro \
+  -p 8125:8125/udp -p 8126:8126 ejholmes/statsd
 ```
 
 Send some metrics to it:

@@ -1,6 +1,0 @@
-#!/bin/sh
-
-confd -verbose -onetime -node $ETCD
-
-cd /opt/statsd
-node stats.js config.js
