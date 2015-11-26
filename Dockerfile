@@ -1,5 +1,5 @@
-FROM ubuntu:12.04
-MAINTAINER Eric Holmes <eric@ejholmes.io>
+FROM ubuntu:14.10
+MAINTAINER Ryan MacLean <ryan@ryanmaclean.com>
 
 ADD ./bin/build /bin/build
 RUN /bin/build
